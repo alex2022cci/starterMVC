@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# on réécrit les conditions pour chercher les dossiers et les fichiers
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# renvoie toutes les urls vers le fichier index.php ($1 est une variable qui correspond à  '(.*)'  ) 
+RewriteRule (.*) index.php/$1

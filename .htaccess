@@ -1,0 +1,6 @@
+# REDIRECTIONS DANS LE SERVEUR APACHE
+
+RewriteEngine On
+
+# on teste l'égalité entre deux urls
+RewriteRule (.*) public_html/$1 [L]
