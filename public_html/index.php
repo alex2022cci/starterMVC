@@ -1,3 +1,3 @@
 <?php
 
-include('../Config/Const.php');
+include '../Config/Const.php';
