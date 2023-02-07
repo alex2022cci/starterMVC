@@ -12,5 +12,9 @@ class MainController extends Controller
         $this->render('index');
     }
 */
+    public function index()
+    {
+        $this->render('index');
+    }
    
 }

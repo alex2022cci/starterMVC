@@ -1,7 +1,3 @@
-
-
-    <h1>home page</h1><br>
-    <?= $phrase;?><br>
-    <?= $nom;?><br>
-
-
+<html>
+<h3>THIS IS ... main/index.php</h3>
+</html>

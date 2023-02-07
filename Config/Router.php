@@ -7,7 +7,7 @@ class Router
      * @param mixed $request
      * @return array
      */
-    static function parse($url, $request)
+    public static function parse($url, $request)
     {
         $url = trim($url, '/');
         $params = explode('/', $url);

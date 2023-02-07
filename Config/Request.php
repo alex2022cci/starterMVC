@@ -1,6 +1,6 @@
 <?php
 
-class Reponse
+class Request
 {
     /**
      * Invocation d'url 
