@@ -64,4 +64,13 @@ class Controller
             echo 'Le model n\'est pas chargé ou n\'existe pas';
          }
     }
+
+    function e404($message)
+    {
+        header("HTTP/1.0 404 Not found ");
+     //   $controller = new Controller($this->request);
+        $this->set('message', $message);
+        $this->render('/error/404');
+        die();
+    }
 }

@@ -67,7 +67,8 @@ class Model
                 {
                     if(!is_numeric($v))
                     {
-                        $v = '"'. mysql_escape_string($v) .'"';
+                        $v = '"'. ($v) .'"';
+                        echo $v;
                     }
                     $cond[] = "$k = $v";
                 }

@@ -12,17 +12,25 @@ class MainController extends Controller
         ));
         $this->render('index');*/
         $this->loadModel('Post');
-        $Post = $this->Post->findFirst(
+        $d['page'] = $this->Post->findFirst(
             array(
-                'conditions' => 'id=1'
+                'conditions' => array('id' => $id),
+                'type'       => 'page' 
                 )
         );
-        $this->set('post', $Post);
-      
+
+        if(empty($Post))
+        {
+
+            $this->e404('erreur 404, page not found');
+        }
+        $d['pages'] = $this->Post->find(array(
+            'conditions' => array('type' => 'page') 
+        ));
+        $this->set($d);
     }
-    
+}
     /*  public function index()
     {
         $this->render('index');
     }*/
-}
